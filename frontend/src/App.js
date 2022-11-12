@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Compound interest</h1>
+      <h1>Compound Interest</h1>
       <form
       component="form"
       sx={{
@@ -46,7 +46,7 @@ function App() {
       autoComplete="off"
     >
       <div>
-      <TextField label="What is the principal" type="number" variant="outlined" onChange={(e)=>setPrincipal(e.target.value)} />
+      <TextField label="What is the principal Amount" type="number" variant="outlined" onChange={(e)=>setPrincipal(e.target.value)} />
       </div>
       <div style={{marginTop:"10px"}}>
       <TextField label="Annual Intrest rate ?" type="number" variant="outlined" onChange={(e)=>setIntrest(e.target.value/100)} />
