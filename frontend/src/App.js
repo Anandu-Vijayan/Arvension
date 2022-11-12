@@ -22,7 +22,7 @@ function App() {
   
 
   const calculate=()=>{
-    const result=Principal*Math.pow(1+intrest,value);
+    const result=Principal*Math.pow(1+intrest/12,value);
     setResult(result.toFixed(2));
     setCompount(result-Principal)
   }
@@ -49,19 +49,19 @@ function App() {
       <TextField label="What is the principal Amount" type="number" variant="outlined" onChange={(e)=>setPrincipal(e.target.value)} />
       </div>
       <div style={{marginTop:"10px"}}>
-      <TextField label="Annual Intrest rate ?" type="number" variant="outlined" onChange={(e)=>setIntrest(e.target.value/100)} />
+      <TextField label="Annual Intrest rate % ?" type="number" variant="outlined" onChange={(e)=>setIntrest(e.target.value/100)} />
       </div>
       
     </form>
     <Box sx={{mt:5}}>
-      <h2>Years</h2>
+      <h2>Month</h2>
       <Slider sx={{width:'300px'}}  onChange={handleChange}  value={value} aria-label="Default" valueLabelDisplay="auto" />
     </Box>
     <br></br>
     
       <div style={{fontSize:"30px"}}>Total Amount = {isNaN(result)? 0:result}</div>
       <div>
-      <div style={{fontSize:"30px"}}>Compount Interest = {isNaN(compount)? 0:compount}</div>
+      <div style={{fontSize:"30px"}}>Compount Interest in Month = {isNaN(compount)? 0:compount}</div>
       </div>
     
     </div>
