@@ -61,7 +61,7 @@ function App() {
     
       <div style={{fontSize:"30px"}}>Total Amount = {isNaN(result)? 0:result}</div>
       <div>
-      <div style={{fontSize:"30px"}}>Compount Intrest = {isNaN(compount)? 0:compount}</div>
+      <div style={{fontSize:"30px"}}>Compount Interest = {isNaN(compount)? 0:compount}</div>
       </div>
     
     </div>
