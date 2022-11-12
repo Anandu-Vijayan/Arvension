@@ -1,14 +1,16 @@
 const express=require('express')
-const connectDB = require('./config/db')
-const dotenv = require('dotenv')
+const userRoutes=require('./routes/userRoutes')
+const bodyParser=require("body-parser")
 
-const app = express()
+
+
+const app=express()
 
 app.use(express.json())
-dotenv.config();
-connectDB()
+// app.use(bodyParser.json())
+app.use('/',userRoutes)
 
-const PORT = process.env.PORT || 5000
 
-app.listen(PORT,console.log(`server Connected PORT ${PORT}`))
 
+
+app.listen (2000,console.log("connected"))
